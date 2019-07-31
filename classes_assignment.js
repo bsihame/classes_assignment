@@ -15,54 +15,63 @@
 //return a formatted string of an instance's full name.
 //Call this method on both the instances you created in part a.
 //
-// class Person {
-//   constructor(firstName, lastName, middleName){
-//          this.firstName = firstName;
-//          this.lastName = lastName;
-//          this.middleName = middleName;
-//   }
-// }
-// fullName () {
-//   return`${this.firstName} ${this.lastName}`;
-// }
-// }
-// let nephew = new Person ('Faysal', 'jehhar', 'Sherif');
-// let son = new Person ('Faris', 'jehharBazi', ' ');
-// console.log(son.firstName);
-//   son.fullName();
-//
+class Person {
+  constructor(firstName, lastName, middleName){
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.middleName = middleName;
+  }
+
+fullName () {
+  return `${this.firstName} ${this.lastName}`;
+}
+}
+let nephew = new Person ('Faysal', 'jehhar', 'Sherif');
+let son = new Person ('Faris', 'jehharBazi', ' ');
+let brother = new Person ('Mohamed', 'Bazi', ' ');
+//console.log
+console.log(`My son's first Name is : `, son.firstName);
+console.log(`My son's name is : `, son.fullName());
+console.log(`My nephew's name is : `, nephew.fullName());
+console.log(`My brother's name is : `, brother.fullName());
+//---------------------------------------------------------
 // // ## Question 2
 // //
 // // a. Create a class called `Book` that has
 // // properties `title`, `author` and `rating`.
 // //Create some instances of `Book`.
-// class Book {
-//   constructor(title, author, rating) {
-//   this.title = title;
-//   this.author = author;
-//   this.rating = rating;
-// }
-// }
-// let book1 = new Book("The Silent Patient", "Alex Michaelides", 9.5);
-// let book2 = new Book("The Wicked King (The Folk of the Air, #2)", "Holly Black", 9);
-// let book3 = new Book("Ask Again, Yes", "Mary Beth Keane", 8);
-// let book4 = new Book("Dianetics: The Modern Science of Mental Health ", "L. Ron Hubbard", 5);
-//
-// // b. Add a method to `Book` called `isGood` that returns `true` if its rating is greater than or equal to 7
-// Book.prototype.isGood = function () {
-// return this.rating >= 7;
-//  };
-// console.log(`${book1.title} is a good book : ${book1.isGood()}`);
-//  console.log(`${book2.title} is a good book : ${book2.isGood()}`);
-//  console.log(`${book3.title} is a good book : ${book3.isGood()}`);
-//  console.log(`${book4.title} is a good book : ${book4.isGood()}`)
-//
-// book1.isGood();
-// book2.isGood();
-// book3.isGood();
-// book4.isGood();
-// ## Question 3
-//
+
+
+class Book {
+  constructor(title, author, rating) {
+  this.title = title;
+  this.author = author;
+  this.rating = rating;
+    }
+    isGood () {
+      return this.rating >= 7;
+        }
+      }
+
+let book1 = new Book("The Silent Patient", "Alex Michaelides", 9.5);
+let book2 = new Book("The Wicked King (The Folk of the Air, #2)", "Holly Black", 9);
+let book3 = new Book("Ask Again, Yes", "Mary Beth Keane", 8);
+let book4 = new Book("Dianetics: The Modern Science of Mental Health ", "L. Ron Hubbard", 5);
+
+
+//----------------------------------------------------------
+// // b. Add a method to `Book` called `isGood` that
+//returns `true` if its rating is greater than or equal to 7
+
+
+console.log(`${book1.title} is a good book : ${book1.isGood()}`);
+console.log(`${book2.title} is a good book : ${book2.isGood()}`);
+console.log(`${book3.title} is a good book : ${book3.isGood()}`);
+console.log(`${book4.title} is a good book : ${book4.isGood()}`)
+
+//============================================================
+//# Question 3
+
 // a. Create a `Dog` class with four properties:
 //`name (string), breed (string),
 // mood (string), and hungry (boolean)`.
@@ -80,58 +89,59 @@
 // d. Add a method called `toString` that returns
 //a description of the dog:
 //       console.log(`Question 3 (a)`)
-// class Dog{
-// constructor (name, breed, mood, hungry) {
-//   this.name = name;
-//   this.breed = breed;
-//   this.mood = mood;
-//   this.hungry = hungry;
-// }
-// }
-//  // let dog1 = new Dog('Molly', 'Bolognese', 'Cheeful', false);
-//  // let dog2 = new Dog('Coco', 'Chug', 'Affectionate', true);
-//  // let dog3 = new Dog('Max', 'Cockapoo', 'playful', false);
-//  // console.log(dog1);
-//  // console.log(dog2);
-//  //  console.log(dog3);
-//
-// console.log(`Question 3 (b)`)
-//
-//
-// class Dog2 {
-//   constructor (name, breed, mood, hungry) {
-//     this.name = name;
-//     this.breed = breed;
-//     this.mood = mood;
-//     this.hungry = hungry;
-// }
-//
-// playFetch() {
-//   this.mood = "playful"
-//   this.hungry = true
-//   console.log("Ruff!")
-// }
-// }
-// let dog2 = new Dog('Coco', 'Chug', 'Affectionate', true);
-// dog2.playFetch()
-// console.log("dog2", dog2)
+class Dog{
+  constructor (name, breed, mood, hungry) {
+          this.name = name;
+          this.breed = breed;
+          this.mood = mood;
+          this.hungry = hungry;
+            }
+      playFetch() {
+          this.mood = "playful";
+          this.hungry = true;
+            console.log(this.name,`: Ruff!`);
+           }
 
-// console.log(`Question 3 (c)`)
-// Dog.prototype.feed = function() {
-//   if (this.hungry) {
-//     this.hungry = false;
-//     console.log(this.name, `: Woof!!`);
-//   } else {
-//     console.log(this.name, `: doesn't look hungry`);
-//   }
-// }
-// dog1.feed();
-// dog2.feed();
-//
-//       console.log(`Question 3 (d)`)
-// Dog.prototype.toString = function() {
-//
-// }
+           feed () {
+             if (this.hungry) {
+               this.hungry = false;
+               console.log(this.name, `: Woof!!`);
+             } else {
+               console.log(this.name, `: doesn't look hungry`);
+             }
+           }
+
+           toString () {
+             let feeding = " not hungry";
+             if( this.hungry){
+               feeding = "hungry";
+           }
+return(`${this.name} is a ${this.mood} and ${feeding} ${this.breed}`);
+         }
+       }
+ let dog1 = new Dog('Molly', 'Bolognese', 'Cheeful', false);
+ let dog2 = new Dog('Coco', 'Chug', 'Affectionate', true);
+ let dog3 = new Dog('Max', 'Cockapoo', 'playful', false);
+//a)
+  console.log(dog1);
+  console.log(dog2);
+  console.log(dog3);
+  //b)
+  dog2.playFetch();
+  dog3.playFetch();
+  console.log(dog2);
+  console.log(dog3);
+  //c)
+  dog1.feed();
+  dog2.feed();
+  console.log(dog1);
+  console.log(dog2);
+  //d)
+  console.log(dog1.toString());
+  console.log(dog2.toString());
+  console.log(dog3.toString());
+
+//-------------------------------------------------
 // ## Question 4
 //
 // There are three common scales that are used to measure temperature: Celsius, Fahrenheit, and Kelvin:
@@ -150,16 +160,8 @@ let freezingPoint = {
   fahrenheit: 32,
   Kelvin: 273
 };
-console.log(`The water's freezing temperature :`, freezingPoint, '\n');
-// const celsius = (F - 32) / 1.8;
-// let fahrenheit = 1.8 * C + 32;
-// let kelvin = C + 273;
-// let freezingPoint = {
-//   if (C = 0) {
-// return
-//   }
-
-
+//a)
+ console.log(`The water's freezing temperature :`, freezingPoint, '\n');
 
 // b. Make a class called `Celsius` that has one property:
 // `celsius`, and two methods `getFahrenheitTemp`, and `getKelvinTemp`.
@@ -170,8 +172,6 @@ console.log(`The water's freezing temperature :`, freezingPoint, '\n');
 // outsideTempt.getKelvinTemp() //returns 283.0
 // outsideTempt.getFahrenheitTemp() //returns 50.0
 // ```
-let array1 =[1,1,1,1,1]
-console.log(array1.concat());
 class Celsius {
   constructor(celsius) {
     this.celsius = celsius;
@@ -180,14 +180,32 @@ class Celsius {
   getFahrenheitTemp() {
     return 1.8 * this.celsius + 32;
   }
-}
 
-let outsideTempt = new Celsius(10.0)
-console.log(outsideTempt);
-console.log(outsideTempt.getFahrenheitTemp());
+  getKelvinTemp(){
+    return 1.8 * this.celsius + 273;
+  }
+  isBelowFreezing(){
+    return (this.celsius < freezingPoint.celsius)
+  }
+  }
 
-// c. Give `Celsius` a method called `isBelowFreezing` that returns a `Bool` (true if the temperature is below freezing).
-//
+let outsideTempt = new Celsius(10.0);
+console.log(`Outside temperature : `, outsideTempt.celsius, `C`);
+console.log(`Outside temperature :` , outsideTempt.getFahrenheitTemp(), `F`);
+console.log(`Outside temperature :` , outsideTempt.getKelvinTemp(), `K`);
+
+// c. Give `Celsius` a method called `isBelowFreezing`
+//that returns a `Bool` (true if the temperature
+//is below freezing).
+
+let temp1 = new Celsius(0);
+let temp2 = new Celsius(36);
+let temp3 = new Celsius(-10);
+ console.log(temp1.celsius, `C is bellow the freezing temperature :`, temp1.isBelowFreezing());
+ console.log(temp2.celsius, `C is bellow the freezing temperature :`, temp2.isBelowFreezing());
+ console.log(temp3.celsius, `C is bellow the freezing temperature :`, temp3.isBelowFreezing());
+
+
 // ## Question 5
 //
 // a. Create a class called `Movie` that has properties for `name`, `year`, `genre`, `cast`, and `description`. Create an instance of your `Movie`
@@ -199,11 +217,17 @@ console.log(outsideTempt.getFahrenheitTemp());
 //
 // ## Question 6
 //
-// Write a constructor Vector that represents a vector in two-dimensional space.
-// It takes two number arguments: `x` and `y` parameters, which it should be saved to properties of the same name.
+// Write a constructor Vector that represents
+//a vector in two-dimensional space.
+// It takes two number arguments: `x` and `y`
+//parameters, which it should be saved to
+//properties of the same name.
 //
-// Give the Vector prototype two methods, `plus` and `minus`, that take another vector as an argument and
-// returns a new vector that has the sum or difference of the two vectors’ (the one in `this` and the parameter) x and y values.
+// Give the Vector prototype two methods,
+// `plus` and `minus`, that take another vector
+//as an argument and
+// returns a new vector that has the sum
+//or difference of the two vectors’ (the one in `this` and the parameter) x and y values.
 //
 // Add a method `getLength` to the prototype that computes the length of the vector ;
 // that is, the distance of the point (x, y) from the origin (0, 0).(a^2 + b^2 = c^2)
@@ -222,6 +246,26 @@ console.log(outsideTempt.getFahrenheitTemp());
 // console.log(v3.getLength());
 // // => 5
 // ```
+class Vector{
+  constructor(x,y){
+    this.x = x;
+    this.y = y;
+  }
+plus(v){
+  let vec = new Vector;
+  vect.x = this.x + v.x;
+  vect.y = this.y + v.y
+  return vect;
+}
+  minus(v){
+    let vect = new Vector;
+    vect.x = this.x - v.x
+    vect.y = this.y - v.y;
+    return vect;
+  }
+  getLength
+}
+}
 //
 // ## Question 7
 //
