@@ -1,6 +1,6 @@
 # Class Exercises
 
-(1 - 6 are the same as on the previous lab, but creating classes using ES6 syntax instead of constructor functions)
+(1 - 8 are the same as on the previous lab, but creating classes using ES6 syntax instead of constructor functions)
 
 ## Question 1
 
@@ -60,7 +60,7 @@ Ex: "Borat came out in 2006. It was an odd film starring Sacha Baron Cohen as a 
 
 ## Question 6
 
-Write a constructor Vector that represents a vector in two-dimensional space.
+Write a class Vector that represents a vector in two-dimensional space.
 It takes two number arguments: `x` and `y` parameters, which it should be saved to properties of the same name.
 
 Give the Vector prototype two methods, `plus` and `minus`, that take another vector as an argument and
@@ -83,8 +83,25 @@ var v3 = new Vector(3, 4)
 console.log(v3.getLength());
 // => 5
 ```
-
 ## Question 7
+
+a. Write a class called `Cylinder` that has properties `radius` and `height`.  Create an instance of a Cylinder.
+
+b. Add an instance method `getVolume` that returns the [volume](https://www.mathopenref.com/cylindervolume.html)
+
+c. Add an instance method `getSurfaceArea` that returns the [surface area](https://www.mathopenref.com/cylinderareamain.html)
+
+## Question 8
+
+[Dates in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-date-and-time-in-javascript#targetText=The%20Date%20object%20is%20a,the%20current%20date%20and%20time.)
+
+a. Write a class called `Post` that has properties `datePosted`, `user`, and `text`.  Create an array of `Post` objects.
+
+b. Create an instance method that returns whether or not the post was made today.
+
+c. Filter your array of `Post` objects to only include posts made today.
+
+## Question 9
 
 a. Make a class called `Car` with properties `make` and `model`.  Create an instance of a `Car`
 
@@ -92,7 +109,7 @@ b. Make a class called `Bike` with properties `gears` and `hasBell`.  Create an 
 
 c. Give each class a static method called `numberOfWheels` that returns the number of wheels (2 for bikes, 4 for cars).  Why does it make sense for this to be a static method instead of an instance method?
 
-## Question 8
+## Question 10
 
 a. Make a class called `Vehicle` with properties `color` and `name`.  Give it a method called `makeSound` which logs "WHHOOSSSH" to the console
 
